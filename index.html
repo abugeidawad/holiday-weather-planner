@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awad Activity Planner</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--AJAX - JQUERY Scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+
+            <!--Header with Name of the App-->
+            <div class="row">
+                <div class="col s12">
+                    <header>
+                        <div id="headertext">
+                            <h1>AWAD Holiday Planner</h1>
+                            <h2>A way to perfect day!!</h2>
+                        </div>
+                    </header>
+                </div>
+            </div>
+            <!--Location Alert if User denies access-->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Some error has occured!</h4>
+                    <br>
+                    <p id="location-required-msg">Sorry, you have to share your location
+                        to work this application properly. Please allow
+                        access to
+                        your
+                        location.</p>
+                </div>
+                <div id="agreebtn" class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                </div>
+            </div>
+
+            <!--Intro Display-->
+            <div class="row">
+                <div class="col s8">
+                    <div class="flow-text" id="intro">
+                        <h4>Plan your wonderful holiday with Awad Holiday Planner </h4>
+                        <br>
+                        <blockquote>Here in this application I used weather forcasting or the location tracker feature to
+                            help you to plan about you holiday with your family or friends. 
+                            
+                            <blockquote>
+
+                    </div>
+                </div>
+
+                <div class="col s4">
+                    <div class="container-weather-display">
+                        <div>
+                            <h5>Today's weather:</h5>
+                            <img class="weatherIcon" alt="weather forecast icon"></img>
+                            <div class="description"></div>
+                            <div class="humidity"></div>
+                            <div class="temp"></div>
+                            <div class="locationName"></div>
+                            <div class="currentDate"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Results-->
+            <div class="container">
+                <div class="row"> </div>
+                <div class="col 12">
+                    <div id="results"> Reason not to visit is:
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Category Selection -->
+
+            <div class="container">
+                <div class="row" id="category-buttons">
+
+                    <div class="col s6">
+                        <img id="nature-img" img src="./assets/images/Natural-Geographical.jpg" width="300"
+                            height="200" alt="cave at sunset"><br>
+                        <button class="waves-effect waves-teal btn-flat filterBtn"
+                            id="nature-btn">Natural-Geographical</button>
+                    </div>
+
+                    <div class="col s6">
+                        <img id="outdoor-recreation-icon" img src="./assets/images/Leisure-Outdoor.jpg" width="300"
+                            height="200" alt="group of people participating in a yoga class"><br>
+                        <button class="waves-effect waves-teal btn-flat filterBtn"
+                            id="outdoor-recreation-button">Leisure-Outdoor</button>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col s6">
+                        <img id="museum-icon" img src="./assets/images/insidemusem.jpg" width="300" height="200" alt="a statue inside a museum"><br>
+                        <button class="waves-effect waves-teal btn-flat filterBtn" id="museum-btn">Museum</button>
+                    </div>
+
+                    <div class="col s6">
+
+                        <img id="tourist-attractions-icon" img src="./assets/images/landmark.jpg" width="300"
+                            height="200" alt="Perth city"><br>
+                        <button class="waves-effect waves-teal btn-flat filterBtn"
+                            id="tourist-attractions-btn">Landmark-Attraction</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s6 offset-s3">
+
+                        <img id="entertainment-icon" img src="./assets/images/restaurant.jpg" wwidth="300"
+                            height="200" alt="fancy restuarant overlooking the ocean"><br>
+                        <button class="waves-effect waves-teal btn-flat filterBtn"
+                            id="entertainment-btn">Restaurant</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+
+    <!--Script JS-->
+
+    <script src="weather.js"></script>
+    <script src="buttonLocation.js"></script>
+
+</body>
+
+
+</html>
